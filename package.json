@@ -7,7 +7,7 @@
     "start": "node_modules/babel-cli/bin/babel.js lib --out-dir dist",
     "build": "node_modules/babel-cli/bin/babel.js lib --out-dir dist",
     "deploy": "rm -rf .publish && npm run build && github-pages-deploy",
-    "preinstall": "npm install",
+    "preinstall": "npm install --ignore-scripts && npm run build",
     "pretest": "npm run build",
     "prepublish": "npm run build",
     "test": "mocha"
